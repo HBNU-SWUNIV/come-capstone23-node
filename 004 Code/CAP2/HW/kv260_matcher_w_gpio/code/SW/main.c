@@ -64,7 +64,7 @@ int main()
         usleep(1000000);
 
         printf("string matchers are ongoing!\n");
-        printf("32 matcher\n");
+        printf("gpio matcher\n");
         printf("packet = 512bit\n\n");
         printf("runtime\t: %08d sec\n", count++);
         printf("checked\t: %08d packet/sec\n", *pass_count_result);

@@ -25,7 +25,7 @@
 code 디렉토리의 binary 파일 중 TOP.bit.bin, TOP.dtbo, shell.json을 KV260에 복사한다.
 ```
 sudo mkdir /lib/firmware/xilinx/<project>
-sudo cp bram.* shell.json /lib/firmware/xilinx/<project>/
+sudo cp TOP.* shell.json /lib/firmware/xilinx/<project>/
 sudo xmutil listapps
 ```
 적용된 project가 정상적으로 나타나는것을 확인할 수 있다.   

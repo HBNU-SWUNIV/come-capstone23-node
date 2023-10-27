@@ -1,0 +1,34 @@
+/*카운터 초기화*/
+ADDI x1,x0,0
+/*카운터 max set*/
+LUI x2,48828
+ADDI x2,x2,512
+/*load주소 설정*/
+ADDI x3,x0,1
+SLLI x3,x3,11
+/*save주소 설정*/
+ADDI x5,x0,0
+/*로직 카운터 초기화*/
+ADDI x4,x0,1
+SW x4,16(x3)
+ADDI x4,x0,0
+SW x4,16(x3)
+/*count 시작*/
+ADDI x1,x1,1
+BNE x1,x2,-4
+/*끝나면 데이터 로드*/
+LW x6,0(x3)
+LW x7,4(x3)
+LW x8,8(x3)
+/*레지스터에 저장한 데이터 세이브*/
+SW x6,0(x5)
+SW x7,4(x5)
+SW x8,8(x5)
+/*로직 카운터 초기화*/
+ADDI x4,x0,1
+SW x4,16(x3)
+ADDI x4,x0,0
+SW x4,16(x3)
+/*카운터 초기화*/
+ADDI x1,x0,0
+JAL x0,-52
